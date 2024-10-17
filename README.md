@@ -131,4 +131,8 @@ en este ejercicio se reutilizan tanto el script del cubo como el de la esfera pe
 
 En este ejercicio se ha añadido otro cilindro (de color rojo), al cual se le ha asignado un script donde se le añade la funcioanlidad de moverse con las teclas "t" (arriba), "g" (abajo), "f" (izquierda) y "h" (derecha). Para realizar el movimiento se hace de la misma forma que en el ejercicio 10 con la esfera. Además, este cilindro sigue a la esfera cuando esta se mueve, para esto se han usado ``` rb.MoveRotation(Quaternion.LookRotation(sphereTransform.position - transform.position)); ``` para rotar el cilindro a la posición de la esfera y ``` rb.MovePosition(transform.position + transform.forward * velocity * Time.deltaTime); ``` para moverlo a hacia la esfera.
 
+Cuando la esfera tiene 10 veces más masa que el cilindro, cuando este está colisionando con la esfera, el cilindro mueve la esfera pero con menos velocidad de cuando la esfera tiene la misma masa que el cilindro. 
+
+Por otro lado, cuando el cilindro tiene 10 veces más masa que la esfera, el cilindro mueve la esfera con más velocidad que cuando la esfera tiene la misma masa que el cilindro.
+
 ![ejercicio12](./vid/ejercicios/ejercicio12.gif)
